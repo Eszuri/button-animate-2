@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>membuat button keren #2</title>
+
+        <style type="text/css" media="all">
+            body {
+                margin: 10;
+            }
+
+            button {
+                width: 200px;
+                height: 70px;
+                border: none;
+                border-radius: 6px;
+                background-color: black;
+                position: relative;
+            }
+
+            button:active > span:nth-child(2) {
+                height: 100%;
+                opacity: 1;
+            }
+
+            button > span:nth-child(1) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 23px;
+                font-weight: 800;
+                transition: 0.7s;
+                z-index: 2;
+            }
+
+            button:active > span:nth-child(1) {
+                color: black;
+            }
+
+            button > span:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 0%;
+                background-color: red;
+                transition: 700ms;
+                border-radius: 6px;
+                z-index: 1;
+                opacity: 0.4;
+            }
+        </style>
+    </head>
+    <body>
+        <button>
+            <span>Pencet Me</span>
+            <!-- buat backgroundnya -->
+            <span></span>
+            <!-- buat backgroundnya end-->
+        </button>
+    </body>
+</html>
